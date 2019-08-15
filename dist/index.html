@@ -11,5 +11,37 @@
     <link rel="stylesheet" href="./css/style.css" />
     <title>Base Apparel</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <section class="section-l">
+        <div class="container">
+          <nav class="navbar">
+            <a href="#"><img src="./img/logo.svg" alt="" class="logo"/></a>
+          </nav>
+          <h1>WE'RE</h1>
+          <h1>COMING</h1>
+          <h1>SOON</h1>
+          <p>
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+
+          <form action="/" method="POST" class="email-form">
+            <input type="email" size="40" placeholder="Email Address" />
+            <button type="submit" class="submit">
+              <img src="./img/icon-arrow.svg" alt="chevron" />
+            </button>
+          </form>
+        </div>
+      </section>
+      <section class="section-r">
+        <picture>
+          <source media="(min-width: 376px)" srcset="./img/hero-desktop.jpg" />
+          <source media="(max-width: 375px)" srcset="./img/hero-mobile.jpg" />
+          <img src="./img/hero-mobile.jpg" alt="woman model looking at you" />
+        </picture>
+      </section>
+    </main>
+  </body>
 </html>
