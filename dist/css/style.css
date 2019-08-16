@@ -35,7 +35,6 @@ h1 {
 
 img {
   max-width: 100%;
-  /* display: block; */
   height: auto;
 }
 
@@ -57,6 +56,7 @@ main {
 .section-l .container {
   position: relative;
   max-width: 54%;
+  min-width: 340px;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -69,7 +69,7 @@ main {
   top: 8%;
 }
 
-.container h1:first-of-type {
+.container h1 span {
   color: var(--primary-color-des-red);
   font-weight: 300;
 }
@@ -87,6 +87,8 @@ main {
 }
 
 .email-form input {
+  font-family: inherit;
+  color: var(--neutral-color);
   max-width: 100%;
   font-size: 1rem;
   display: inline-block;
@@ -99,11 +101,12 @@ main {
 .email-form .submit {
   display: inline-block;
   position: absolute;
-  /* top: 0; */
-  right: 8%;
+  top: 0;
+  right: 0%;
   width: 100px;
   height: 60px;
   background-image: var(--gradient-button);
+  /* background-color: transparent; */
   font-size: 1rem;
   text-align: center;
   margin: 0;
@@ -139,6 +142,35 @@ main {
   opacity: 0.7;
 }
 
+input[type='email']:invalid {
+  border: 1.5px solid var(--primary-color-soft-red);
+}
+
+:invalid + .icon-validation::before {
+  position: absolute;
+  right: 110px;
+  top: 13px;
+  background-color: var(--primary-color-soft-red);
+  color: #fff;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border: none;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 2em;
+  content: attr(data-icon);
+}
+
+:invalid ~ .error-msg::after {
+  display: block;
+  opacity: 0.7;
+  margin-top: 0.5rem;
+  content: attr(title);
+  color: var(--primary-color-soft-red);
+  margin-left: 1.5rem;
+}
+
 /* Utilities */
 
 /* Media Queries */
@@ -156,11 +188,6 @@ main {
     font-size: 0.9rem;
   }
 
-  .container {
-    width: 100%;
-    margin: 0;
-  }
-
   /* section left */
 
   .section-l {
@@ -171,10 +198,12 @@ main {
 
   .section-l .container {
     max-width: 85%;
+    min-width: 0;
   }
 
   .container .navbar {
-    top: -365px;
+    top: -335px;
+    left: -30px;
   }
 
   .navbar img {
@@ -201,5 +230,20 @@ main {
     width: 70px;
     height: 46px;
     font-size: 0.8rem;
+  }
+
+  :invalid + .icon-validation::before {
+    position: relative;
+    right: -50px;
+    top: -35px;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.8em;
+  }
+
+  :invalid ~ .error-msg::after {
+    margin-top: -1.5rem;
+    content: attr(title);
+    margin-left: -50px;
   }
 }

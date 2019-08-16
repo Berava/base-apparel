@@ -18,9 +18,7 @@
           <nav class="navbar">
             <a href="#"><img src="./img/logo.svg" alt="" class="logo"/></a>
           </nav>
-          <h1>WE'RE</h1>
-          <h1>COMING</h1>
-          <h1>SOON</h1>
+          <h1><span>WE'RE</span> COMING SOON</h1>
           <p>
             Hello fellow shoppers! We're currently building our new fashion
             store. Add your email below to stay up-to-date with announcements
@@ -28,10 +26,16 @@
           </p>
 
           <form action="/" method="POST" class="email-form">
-            <input type="email" size="40" placeholder="Email Address" />
+            <input
+              type="email"
+              size="50"
+              placeholder="Email Address"
+              maxlength="33"
+            /><span class="icon-validation" data-icon="!"></span>
             <button type="submit" class="submit">
               <img src="./img/icon-arrow.svg" alt="chevron" />
             </button>
+            <span class="error-msg" title="Please provide a valid email"></span>
           </form>
         </div>
       </section>
