@@ -178,6 +178,7 @@ input[type='email']:invalid {
   main {
     grid-template-columns: 1fr;
     overflow: hidden;
+    background-color: #fff8f8;
   }
 
   h1 {
@@ -191,7 +192,7 @@ input[type='email']:invalid {
   /* section left */
 
   .section-l {
-    margin-top: 50px;
+    margin-top: 150px;
     background-image: none;
     text-align: center;
   }
@@ -202,7 +203,7 @@ input[type='email']:invalid {
   }
 
   .container .navbar {
-    top: -335px;
+    top: -365px;
     left: -30px;
   }
 
@@ -212,7 +213,9 @@ input[type='email']:invalid {
 
   .section-r {
     order: -1;
-    margin-top: 85px;
+    padding-top: 85px;
+    height: 250px;
+    background-color: #fff;
   }
 
   .email-form {
@@ -223,6 +226,7 @@ input[type='email']:invalid {
     max-width: 98%;
     font-size: 0.8rem;
     padding: 15px;
+    background-color: #fff8f8;
   }
 
   .email-form .submit {
